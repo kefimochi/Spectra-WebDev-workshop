@@ -1,0 +1,152 @@
+html {
+  font-size: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5)),
+    url("https://raw.githubusercontent.com/calebmer/calebmer.github.io/f49671d679b3a20e628e9ec017bbf0f6d91dda41/assets/images/cool-tree-background.png");
+
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  height: auto;
+}
+
+body,
+html {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  color: #bdcf81;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 40vh;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.key {
+  border: 0.4rem solid black;
+  border-color: #bdcf81;
+  border-radius: 0.2rem;
+  margin: 1rem;
+  font-size: 1.1rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.09s ease;
+  width: 8rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0.2rem 0.2rem 0.9rem black;
+  border-radius: 1em;
+}
+
+.playing {
+  transform: scale(1.2);
+  border-color: #d1ed75;
+  box-shadow: 0 0 1rem #d1ed75;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #c3db70;
+}
+
+.font1 {
+  font-family: "Shadows Into Light Two", cursive;
+}
+
+.font2 {
+  font-family: "Dancing Script", cursive;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    background-image: url("https://github.com/Kefimochi/Javascript30/blob/master/cool-tree-background3.png?raw=true");
+    height: 100%;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    color: #bdcf81;
+    text-shadow: 2px 3px #101516;
+    margin-top: 2rem;
+  }
+
+  .subheader {
+    font-size: 1.7rem;
+    text-shadow: 1px 3px #101516;
+    margin: 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header {
+    font-size: 9rem;
+    text-shadow: 4px 5px #101516;
+    margin: 2rem;
+  }
+
+  .subheader {
+    font-size: 3rem;
+    text-shadow: 2px 3px #101516;
+    margin: 1rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header {
+    font-size: 11rem;
+    text-shadow: 5px 7px #101516;
+    margin: 3rem;
+  }
+
+  .subheader {
+    font-size: 3rem;
+    text-shadow: 2px 3px #101516;
+    margin: 0rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .header {
+    font-size: 14rem;
+    text-shadow: 5px 7px #101516;
+    margin: 3rem;
+  }
+
+  .subheader {
+    font-size: 3.3rem;
+    text-shadow: 2px 3px #101516;
+    margin: 0rem;
+  }
+}
