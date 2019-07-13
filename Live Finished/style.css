@@ -4,25 +4,32 @@ html {
   margin: 0;
 }
 
-.main-img {
-  background-image: url("photo.jpg");
-  background-position: 2em 50em;
-  background-attachment: fixed;
-  background-size: cover;
-  /* background-size: 50vh; */
-  height: 30vh;
-  z-index: 1;
-  position: relative;
-  border-top: 5px solid #fac3c4;
-  box-shadow: 0 2px 30px -5px rgba(0, 0, 0, 0.45);
+.inner-container {
+  border-radius: 2em;
+  background-color: #fee7e0;
+  padding: 0.5em;
+  min-height: 91vh;
 }
 
-.main-img h1 {
-  color: #fee7e0;
-  text-shadow: 0.2rem 0.2rem 0.2em rgba(0, 0, 0, 0.9);
-  top: 0.4em;
+.inner-container h1 {
+  color: #b8363b;
+  font-size: 3em;
+  margin: 0.4em;
+  font-family: "Nothing You Could Do", cursive;
+}
+
+.main-img {
+  background: url("photo.jpg");
+  background-position: 2em 63em;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 180vh;
+  height: 30vh;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  z-index: 1;
   position: relative;
-  font-size: 5.5em;
+  /* box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.25); */
 }
 
 .outer-container {
@@ -34,27 +41,23 @@ html {
 
 .keys {
   display: flex;
-  position: relative;
-  bottom: 1.5em;
   z-index: 0;
   background: #fee7e0;
-  max-width: 55vh;
-  padding: 4em 20em;
+  max-width: 60vh;
+  padding: 0 20em;
   flex-wrap: wrap;
-  box-shadow: 0 2px 30px -5px rgba(0, 0, 0, 0.25);
   border-radius: 2em;
+  font-family: "Quicksand", sans-serif;
 }
 
 .key {
-  border: 0.4rem solid #b8363b;
-  margin: 1.5em;
+  border: 0.25em solid #b8363b;
+  margin: 1.5em 2em;
   width: 8rem;
   font-size: 1.1rem;
   padding: 1rem 0.5rem;
   transition: all 0.15s ease;
   color: #b8363b;
-  /* background: rgba(0, 0, 0, 0.2); */
-  /* text-shadow: 0.2rem 0.2rem 0.9rem rgba(0, 0, 0, 0.8); */
   border-radius: 1em;
   display: flex;
   flex-direction: column;
@@ -67,7 +70,7 @@ html {
 
 kbd {
   font-size: 4rem;
-  /* Add font */
+  font-family: "Nothing You Could Do", cursive;
 }
 
 .sound {
@@ -85,9 +88,9 @@ kbd {
   user-select: none;
 }
 
-@media only screen and (max-width: 816px) {
+@media only screen and (max-width: 845px) {
   .keys {
-    padding: 2em 0;
+    padding: 2em 4em;
     justify-content: center;
   }
 }
