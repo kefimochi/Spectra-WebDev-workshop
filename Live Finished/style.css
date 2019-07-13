@@ -1,7 +1,6 @@
 html {
   font-size: 10px;
-  background-color: #ffc8c1;
-  max-width: 100%;
+  background-color: #2a3538;
   height: auto;
 }
 
@@ -13,42 +12,49 @@ html {
 
 .main-img {
   background-image: url("photo.jpg");
+  background-position: 2em 69em;
   background-attachment: fixed;
   background-size: cover;
   height: 30vh;
+  z-index: 1;
+  position: relative;
+  /* border: 2px solid white; */
+  box-shadow: 0 2px 30px -5px rgba(0, 0, 0, 0.45);
 }
 
-.container {
+.outer-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 50em;
-  height: auto;
 }
 
 .keys {
-  /* display: flex; */
-  background-color: #bdcf81;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* flex-wrap: wrap; */
+  display: flex;
+  position: relative;
+  bottom: 1.5em;
+  z-index: 0;
+  background: #fee7e0;
+  max-width: 55vh;
+  padding: 4em 20em;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 30px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 2em;
 }
 
 .key {
-  border: 0.4rem solid black;
-  border-color: #bdcf81;
-  border-radius: 0.2rem;
-  margin: 1rem;
+  border: 0.4rem solid #b8363b;
+  margin: 1.5em;
+  width: 8rem;
   font-size: 1.1rem;
   padding: 1rem 0.5rem;
-  transition: all 0.09s ease;
-  width: 8rem;
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  text-shadow: 0.2rem 0.2rem 0.9rem black;
+  transition: all 0.15s ease;
+  color: #b8363b;
+  /* background: rgba(0, 0, 0, 0.2); */
+  /* text-shadow: 0.2rem 0.2rem 0.9rem rgba(0, 0, 0, 0.8); */
   border-radius: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .playing {
@@ -58,15 +64,14 @@ html {
 }
 
 kbd {
-  display: block;
   font-size: 4rem;
+  /* Add font */
 }
 
 .sound {
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  color: #c3db70;
 }
 
 .noselect {
@@ -76,4 +81,11 @@ kbd {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media only screen and (max-width: 816px) {
+  .keys {
+    padding: 2em 0;
+    justify-content: center;
+  }
 }
