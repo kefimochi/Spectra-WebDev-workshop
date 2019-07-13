@@ -1,14 +1,6 @@
 html {
   font-size: 10px;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5)),
-    url("https://raw.githubusercontent.com/calebmer/calebmer.github.io/f49671d679b3a20e628e9ec017bbf0f6d91dda41/assets/images/cool-tree-background.png");
-
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
+  background-color: #ffc8c1;
   max-width: 100%;
   height: auto;
 }
@@ -16,21 +8,31 @@ html {
 body,
 html {
   text-align: center;
+  margin: 0;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  color: #bdcf81;
+.main-img {
+  background-image: url("photo.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 30vh;
 }
 
-.keys {
+.container {
   display: flex;
-  flex: 1;
-  min-height: 40vh;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 50em;
+  height: auto;
+}
+
+.keys {
+  /* display: flex; */
+  background-color: #bdcf81;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
 }
 
 .key {
@@ -67,14 +69,6 @@ kbd {
   color: #c3db70;
 }
 
-.font1 {
-  font-family: "Shadows Into Light Two", cursive;
-}
-
-.font2 {
-  font-family: "Dancing Script", cursive;
-}
-
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -82,71 +76,4 @@ kbd {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  html {
-    background-image: url("https://github.com/Kefimochi/Javascript30/blob/master/cool-tree-background3.png?raw=true");
-    height: 100%;
-  }
-  .header {
-    display: flex;
-    justify-content: center;
-    font-size: 5rem;
-    color: #bdcf81;
-    text-shadow: 2px 3px #101516;
-    margin-top: 2rem;
-  }
-
-  .subheader {
-    font-size: 1.7rem;
-    text-shadow: 1px 3px #101516;
-    margin: 1rem;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .header {
-    font-size: 9rem;
-    text-shadow: 4px 5px #101516;
-    margin: 2rem;
-  }
-
-  .subheader {
-    font-size: 3rem;
-    text-shadow: 2px 3px #101516;
-    margin: 1rem;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .header {
-    font-size: 11rem;
-    text-shadow: 5px 7px #101516;
-    margin: 3rem;
-  }
-
-  .subheader {
-    font-size: 3rem;
-    text-shadow: 2px 3px #101516;
-    margin: 0rem;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .header {
-    font-size: 14rem;
-    text-shadow: 5px 7px #101516;
-    margin: 3rem;
-  }
-
-  .subheader {
-    font-size: 3.3rem;
-    text-shadow: 2px 3px #101516;
-    margin: 0rem;
-  }
 }
