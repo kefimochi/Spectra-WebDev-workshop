@@ -27,7 +27,7 @@ hr {
 
 .main-img {
   background: url("photo.jpg");
-  background-position: 0 67em;
+  background-position: 0 70em;
   background-attachment: fixed;
   background-size: cover;
   /* background-size: 90vh; */
