@@ -23,6 +23,9 @@ window.addEventListener("keydown", function(e) {
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
 
 function playSound(isClick, e) {
+  // Declaring audio in outer scope in order to re-write it later
+  // depending on whether an event is 'mousedown' or 'kedown'
+  let audio;
   // Executes in case user clicks on a key.
   if (isClick === true) {
     // Returns a key object on which click event fired and
@@ -30,17 +33,8 @@ function playSound(isClick, e) {
     let target = e.currentTarget;
     target.classList.add("playing");
 
-    //Wtf this code does?
-    console.log("target.dataset.key", target.dataset.key);
-    for (let i = 0; i < keys.length; i++) {
-      if (target.dataset.key === keys[i].dataset.key) {
-        const audio = document.querySelector(
-          `audio[data-key="${keys[i].dataset.key}"]`
-        );
-        audio.currentTime = 0;
-        audio.play();
-      }
-    }
+    // Selects audio file with a corresponding data key.
+    audio = document.querySelector(`audio[data-key="${target.dataset.key}"]`);
   }
 
   // Executes in case user presses a keyboard key.
@@ -50,7 +44,7 @@ function playSound(isClick, e) {
     // as well as on audio elements in HTML to make it easier to select them.
 
     // Selects audio file with a corresponding data key.
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     // Selects a key abject with a corresponding data key.
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
 
@@ -58,12 +52,11 @@ function playSound(isClick, e) {
     // the class of playing to the key on which click event occured.
     if (!audio) return;
     key.classList.add("playing");
-
-    // Setting audio's currentTime to zero will make sure that audio starts
-    // from the beginning every time a key is pressed.
-    audio.currentTime = 0;
-    audio.play();
   }
+  // Setting audio's currentTime to zero will make sure that audio starts
+  // from the beginning every time a key is pressed.
+  audio.currentTime = 0;
+  audio.play();
 }
 
 function removeTransition(e) {
