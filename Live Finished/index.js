@@ -1,3 +1,14 @@
+const keys = document.querySelectorAll(".key"); // Returns an array of objects
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+keys.forEach(key =>
+  key.addEventListener("mousedown", function(e) {
+    playSound(true, e); // Can't do () => since need to pass arguments
+  })
+);
+window.addEventListener("keydown", function(e) {
+  playSound(false, e);
+});
+
 function removeTransition(e) {
   if (e.propertyName !== "transform") return;
   this.classList.remove("playing");
@@ -29,15 +40,3 @@ function playSound(isClick, e) {
     audio.play();
   }
 }
-const keys = document.querySelectorAll(".key");
-//Since keys is an array, can't just call addEventListener
-//Instead, for each key add an event listener
-keys.forEach(key => key.addEventListener("transitionend", removeTransition));
-keys.forEach(key =>
-  key.addEventListener("mousedown", function(e) {
-    playSound(true, e);
-  })
-);
-window.addEventListener("keydown", function(e) {
-  playSound(false, e);
-});
