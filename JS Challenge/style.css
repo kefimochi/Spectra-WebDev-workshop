@@ -1,0 +1,58 @@
+html {
+  background: #bdcf81;
+}
+.top {
+  transition: all 0.1s ease;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 200;
+  border-bottom: 0.01em solid #eaeaea;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.selectAll {
+  background: #dbdbdb;
+  border-top-left-radius: 0.6em;
+}
+.clearAll {
+  background: #dbdbdb;
+  border-top-right-radius: 0.6em;
+}
+.inbox {
+  max-width: 30em;
+  margin: 3em auto;
+  background: white;
+  border-radius: 1em;
+  box-shadow: 0.5em 0.5em 0 rgba(0, 0, 0, 0.15);
+}
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.01em solid #eaeaea;
+}
+.item:last-child {
+  border-bottom: 0;
+}
+input:checked + p {
+  background: #efefef;
+  text-decoration: line-through;
+}
+input[type="checkbox"] {
+  margin: 1.5em;
+}
+p {
+  margin: 0;
+  padding: 20px;
+  flex: 1;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.3em;
+  font-weight: 200;
+  border-left: 1px solid #eaeaea;
+}
