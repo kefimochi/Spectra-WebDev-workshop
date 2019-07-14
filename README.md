@@ -6,7 +6,8 @@ This is what was built during the workshop:
 https://codepen.io/KateEfimova/pen/GbarOZ
 
 Additional Resources
-https://www.youtube.com/playlist?list=PLillGF-RfqbYE6Ik_EuXA2iZFcE082B3s - Traversy Media video series
-https://css-tricks.com/ - Great tips for CSS
-https://www.w3schools.com/ - Good for web dev
-https://en.wikipedia.org/wiki/DOM_events - All DOM events
+
+1. https://www.youtube.com/playlist?list=PLillGF-RfqbYE6Ik_EuXA2iZFcE082B3s - Traversy Media video series
+2. https://css-tricks.com/ - Great tips for CSS
+3. https://www.w3schools.com/ - Good for web dev
+4. https://en.wikipedia.org/wiki/DOM_events - All DOM events
